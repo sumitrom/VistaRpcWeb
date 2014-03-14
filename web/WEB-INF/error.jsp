@@ -18,7 +18,7 @@
         <div id="container">
 
             <div id="loginbox" style="text-align: center">
-                <h1><b>The following error occured: <%=error_string%></b></h1>
+                <h3><b>The following error occured: <%=error_string%></b></h3>
 
                 <form class="box" method="LINK" action="login.jsp">
                     

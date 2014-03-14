@@ -12,17 +12,22 @@ and open the template in the editor.
 {
     margin: 0 30px;
     background: #87CEFA;
-    font-family: verdana;
+    font-family: Tahoma;
 }
 
 #header
 {
+    font-family: Tahoma;
+    font-size: 80%;
     background: #B8B8B8;
     padding: 20px;
 }
 
 #header h1 
-{ margin: 0; 
+{ 
+    font-family: Tahoma;
+    font-size: 100%;
+    margin: 0; 
 
 }
 
@@ -74,8 +79,10 @@ and open the template in the editor.
 
 #content h3
 {
+
+    font-family: Tahoma;
     color: #000;
-    font-size: 100%;
+    font-size: 75%;
     margin: 0 0 .5em;
 }
 
@@ -112,6 +119,6 @@ and open the template in the editor.
 }
 
 .loginbox {
-  margin-left: auto ;
-  margin-right: auto ;
+    margin-left: auto ;
+    margin-right: auto ;
 }
