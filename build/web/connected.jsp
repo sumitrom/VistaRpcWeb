@@ -29,11 +29,13 @@
 
         String uname = (String) session.getAttribute("uname");
         RPCClient cxn = (RPCClient) session.getAttribute("cxn");
-
+        String vistaip = (String) session.getAttribute("vistaip");
+        String vport = (String) session.getAttribute("vport");
+        String conninfo = (String) session.getAttribute("conninfo");
         System.out.println("Connected: " + cxn.isConnected());
     %>
 
-    <body>
+    <body bgcolor="#980000">
         <div id="container">
             <div id="header">
                 <h1>
@@ -60,7 +62,7 @@
             </div>
 
             <div id="footer">
-                Logged in as: <%= uname.toString()%>
+                Logged in as: <%= uname.toString() + conninfo%> 
             </div>
         </div>
     </body>

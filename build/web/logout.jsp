@@ -13,7 +13,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Log out - RPC Runner</title>
     </head>
-    <body>
+    <body bgcolor="#980000">
         <div id="container">
 
         <div id="loginbox" style="text-align: center">

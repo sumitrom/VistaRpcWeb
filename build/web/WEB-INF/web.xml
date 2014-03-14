@@ -5,6 +5,10 @@
         <servlet-class>org.sumi.servlet.loginservlet</servlet-class>
     </servlet>
     <servlet>
+        <servlet-name>reloginservlet</servlet-name>
+        <servlet-class>org.sumi.servlet.reloginservlet</servlet-class>
+    </servlet>
+    <servlet>
         <servlet-name>LogoutServlet</servlet-name>
         <servlet-class>org.sumi.servlet.LogoutServlet</servlet-class>
     </servlet>
@@ -19,6 +23,10 @@
     <servlet-mapping>
         <servlet-name>loginservlet</servlet-name>
         <url-pattern>/loginservlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>reloginservlet</servlet-name>
+        <url-pattern>/reloginservlet</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
         <servlet-name>LogoutServlet</servlet-name>

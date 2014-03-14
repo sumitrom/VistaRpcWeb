@@ -23,34 +23,25 @@ import org.sumi.rpc.rpc.exceptions.LoginException;
  *
  * @author longview
  */
-public class loginservlet extends HttpServlet {
+public class reloginservlet extends HttpServlet {
 
     @Override
-    protected void doPost(HttpServletRequest request, HttpServletResponse response)
+    protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
 
-        String vistaip = request.getParameter("vistaip");
-        String port = request.getParameter("vistaport");
-        int vistaport = Integer.parseInt(request.getParameter("vistaport"));
-        String vport = request.getParameter("vistaport");
-
-        String accesscode = request.getParameter("accesscode");
-        String verifycode = request.getParameter("verifycode");
         HttpSession session = request.getSession();
+
+        String vistaip = (String) session.getAttribute("vistaip");
+//        int vistaport = (int) session.getAttribute("vistaport");
+//   //     int vistaport = Integer.parseInt(port);
+        String vport = (String) session.getAttribute("vistaport");
+        int vistaport = Integer.parseInt(port);
+        String accesscode = (String) session.getAttribute("accesscode");
+        String verifycode = (String) session.getAttribute("verifycode");
 
         try (PrintWriter out = response.getWriter()) {
 
-//            out.println("<!DOCTYPE html>");
-//            out.println("<html>");
-//            out.println("<head>");
-//            out.println("<link rel=\"stylesheet\" type=\"text/css\" href=\"css/reset.css\">");
-//            out.println("<link rel=\"stylesheet\" type=\"text/css\" href=\"css/structure.css\">");
-//            out.println("<title>Welcome page</title>");
-//            out.println("</head>");
-//            out.println("<body>");
-//            out.println("<p>Session ID: " + session.getId() + "</p><br>");
-//            out.println("<p>Trying to connect to " + vistaip + ":" + vistaport + " using " + accesscode + "/" + verifycode + " combo...</p>");
             RPCClient c = new RPCClient(vistaip, vistaport);
             try {
                 c.login(accesscode, verifycode);
@@ -61,10 +52,7 @@ public class loginservlet extends HttpServlet {
                 String token[] = resp.split("\r\n");
                 String username = token[1];
                 String conninfo = (" * Connected to " + vistaip + " at port " + vport);
-                // session.setAttribute(username, out);
-                
-                //Set session attributes
-                
+
                 session.setAttribute("cxn", c);
                 session.setAttribute("uname", username);
                 session.setAttribute("vistaip", vistaip);
@@ -72,15 +60,12 @@ public class loginservlet extends HttpServlet {
                 session.setAttribute("conninfo", conninfo);
                 session.setAttribute("accesscode", accesscode);
                 session.setAttribute("verifycode", verifycode);
-                
-                // end set session attributes
-                
                 RequestDispatcher requestDispatcher;
                 requestDispatcher = request.getRequestDispatcher("connected.jsp");
                 requestDispatcher.forward(request, response);
             } catch (LoginException ex) {
                 out.println("<p><br><br>Connected: " + c.isConnected() + "</p><br>");
-                Logger.getLogger(loginservlet.class.getName()).log(Level.SEVERE, null, ex);
+                Logger.getLogger(reloginservlet.class.getName()).log(Level.SEVERE, null, ex);
                 out.println("<p>The following error occured: " + ex.getMessage() + "</p><br>");
                 c.disconnect();
                 session.setAttribute("err_msg", ex.getMessage());

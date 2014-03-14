@@ -10,15 +10,17 @@ and open the template in the editor.
 
 #container
 {
+    position fixed;
     margin: 0 30px;
     background: #87CEFA;
     font-family: Tahoma;
+    margin:auto;
 }
 
 #header
 {
     font-family: Tahoma;
-    font-size: 80%;
+    font-size: 120%;
     background: #B8B8B8;
     padding: 20px;
 }
@@ -29,6 +31,14 @@ and open the template in the editor.
     font-size: 100%;
     margin: 0; 
 
+}
+
+#container h2
+{
+    color: #000;
+    font-size: 120%;
+    text-align: center;
+    margin: 0 0 .5em;
 }
 
 #navigation
@@ -64,6 +74,7 @@ and open the template in the editor.
 
 #content
 {
+    color: #0000FF;
     clear: left;
     padding: 20px;
 
@@ -86,11 +97,21 @@ and open the template in the editor.
     margin: 0 0 .5em;
 }
 
+#content p
+{
+    font-family: Tahoma;
+    color: #000;
+    font-size: 75%;
+    margin: 0 0 .5em;
+}
+
 #footer
 {
     background: #ccc;
     text-align: center;
     padding: 20px;
+    font: Verdana;
+    font-size: 75%;
     height: .7%;
 }
 
@@ -98,7 +119,7 @@ and open the template in the editor.
     background-color: #F5FFFA;
     font-size:12px;
     width: 200px;
-    height: 15px;
+    height: 12px;
     border: 1px #999;
     border-radius: 10px;
     padding: 10px;

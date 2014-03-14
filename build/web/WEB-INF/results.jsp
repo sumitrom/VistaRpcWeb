@@ -25,13 +25,13 @@
         if (session.getAttribute("uname") == null) {
             response.sendRedirect("login.jsp");
         }
-        
+        String conninfo = (String) session.getAttribute("conninfo");
         String rpctorun = (String) session.getAttribute("rpctorun");
         String parameters = (String) session.getAttribute("parameters");
         String inputstring = (String) session.getAttribute("output");
         String token[] = inputstring.split("\n");%>
 
-    <body>
+    <body bgcolor="#980000">
         <div id="container">
             <div id="header">
                 <h1>
@@ -66,7 +66,7 @@
 
             </div>
             <div id="footer">
-                Logged in as: <%= uname.toString()%>
+                Logged in as: <%= uname.toString() + conninfo%> 
             </div>
         </div>
 

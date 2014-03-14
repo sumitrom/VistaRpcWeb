@@ -7,7 +7,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>VistA RPC</title>
     </head>
-    <body>
+    <body bgcolor="#980000">
         <div id="container">
             <div id="header">
                 <h1>
@@ -27,7 +27,7 @@
                 <div id="loginbox" style="text-align: center">
 
 
-                    <form class="box login" method="POST" action="loginservlet">
+                    <form method="POST" action="loginservlet">
 
                         <input type="text" tabindex="1" placeholder="VistA Servername or IP Address" name="vistaip" required class="myinput"><br>
                         <input type="text" tabindex="2" placeholder="VistA Port" name="vistaport" required class="myinput"><br>

@@ -6,10 +6,6 @@
 package org.sumi.servlet;
 
 import java.io.IOException;
-import java.io.PrintWriter;
-import static java.lang.System.out;
-import java.util.ArrayList;
-import java.util.Arrays;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -46,16 +42,18 @@ public class RunRpcServlet extends HttpServlet {
         cxn.call(r);
         String resp = r.getResponse();
 
-        System.out.println(
-                "Connected: " + cxn.isConnected());
         session.setAttribute("rpctorun", rpctorun);
         session.setAttribute("parameters", parameters);
         session.setAttribute("output", resp);
-        RequestDispatcher requestDispatcher;
-        requestDispatcher = request.getRequestDispatcher("WEB-INF/results.jsp");
-        requestDispatcher.forward(request, response);
-        {
 
+        if (resp.contains("ERROR=")) {
+            RequestDispatcher requestDispatcher;
+            requestDispatcher = request.getRequestDispatcher("WEB-INF/error_in_results.jsp");
+            requestDispatcher.forward(request, response);
+        } else {
+            RequestDispatcher requestDispatcher;
+            requestDispatcher = request.getRequestDispatcher("WEB-INF/results.jsp");
+            requestDispatcher.forward(request, response);
         }
     }
 }

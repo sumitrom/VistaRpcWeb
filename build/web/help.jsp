@@ -7,7 +7,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>VistA RPC</title>
     </head>
-    <body>
+    <body bgcolor="#980000">
         <div id="container">
             <div id="header">
                 <h1>
@@ -29,6 +29,12 @@
                 </p>
 
                 <h3>How to pass LIST parameters:</h3>
+                <p>For list parameters, use "^" as delimeters. For example:<br>
+                    For RPC XYZ that accepts list parameters only, Parameters are supplied thus:<br>
+                    <font color="red">12^abcd^edtf^hypo<br></font>
+                    In the Above example, 12^abcd^edtf^hypo are list parameters.
+                </p>
+                <h3>How to pass ORDERED LIST parameters:</h3>
                 <p>For ordered list parameters, use [] and #. For example:<br>
                     For RPC ORWORR GET4LST, Parameters are supplied thus:<br>
                     <font color="red">2#3130610.155123#[1,33249;1]#[2,33248;1]<br></font>
