@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.1" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
+    <servlet>
+        <servlet-name>loginservlet</servlet-name>
+        <servlet-class>org.sumi.servlet.loginservlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>LogoutServlet</servlet-name>
+        <servlet-class>org.sumi.servlet.LogoutServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>getProviders</servlet-name>
+        <servlet-class>org.sumi.servlet.getProviders</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>matchPatientByIen</servlet-name>
+        <servlet-class>org.sumi.servlet.matchPatientByIen</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>loginservlet</servlet-name>
+        <url-pattern>/loginservlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>LogoutServlet</servlet-name>
+        <url-pattern>/LogoutServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>getProviders</servlet-name>
+        <url-pattern>/getProviders</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>matchPatientByIen</servlet-name>
+        <url-pattern>/matchPatientByIen</url-pattern>
+    </servlet-mapping>
+    <session-config>
+        <session-timeout>
+            30
+        </session-timeout>
+    </session-config>
+    <welcome-file-list>
+        <welcome-file>login.jsp</welcome-file>
+    </welcome-file-list>
+</web-app>

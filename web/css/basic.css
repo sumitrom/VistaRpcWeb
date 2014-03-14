@@ -1,0 +1,117 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Mar 9, 2014, 11:16:13 AM
+    Author     : Sumitro
+*/
+
+#container
+{
+    margin: 0 30px;
+    background: #87CEFA;
+    font-family: verdana;
+}
+
+#header
+{
+    background: #B8B8B8;
+    padding: 20px;
+}
+
+#header h1 
+{ margin: 0; 
+
+}
+
+#navigation
+{
+    float: left;
+    width: 100%;
+    background: #333;
+}
+
+#navigation ul
+{
+    margin: 0;
+    padding: 0;
+}
+
+#navigation ul li
+{
+    list-style-type: none;
+    display: inline;
+}
+
+#navigation li a
+{
+    display: block;
+    float: right;
+    padding: 5px 10px;
+    color: #fff;
+    text-decoration: none;
+    border-right: 1px solid #fff;
+}
+
+#navigation li a:hover { background: #383; }
+
+#content
+{
+    clear: left;
+    padding: 20px;
+
+}
+
+#content h2
+{
+    color: #000;
+    font-size: 120%;
+    text-align: center;
+    margin: 0 0 .5em;
+}
+
+#content h3
+{
+    color: #000;
+    font-size: 100%;
+    margin: 0 0 .5em;
+}
+
+#footer
+{
+    background: #ccc;
+    text-align: center;
+    padding: 20px;
+    height: .7%;
+}
+
+#loginbox .myinput {
+    background-color: #F5FFFA;
+    font-size:12px;
+    width: 200px;
+    height: 15px;
+    border: 1px #999;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 0 0 .25em;
+}
+
+#loginbox .mybutton {
+    background-color:  #E9967A;
+    font-weight: bold;
+    font-size:14px;
+    width: 220px;
+    height: 35px;
+    border: 1px #999;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 0 0 .25em;
+    cursor: pointer;
+}
+
+.loginbox {
+  margin-left: auto ;
+  margin-right: auto ;
+}
