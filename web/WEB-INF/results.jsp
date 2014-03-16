@@ -31,7 +31,7 @@
         String inputstring = (String) session.getAttribute("output");
         String token[] = inputstring.split("\n");%>
 
-    <body bgcolor="#980000">
+    <body>
         <div id="container">
             <div id="header">
                 <h1>

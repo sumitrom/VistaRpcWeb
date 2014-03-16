@@ -31,7 +31,7 @@
         String inputstring = (String) session.getAttribute("output");
         String token[] = inputstring.split("\n");%>
 
-    <body bgcolor="#980000">
+    <body>
         <div id="container">
             <div id="header">
                 <h1>
@@ -41,7 +41,6 @@
             <div id="navigation">
                 <ul>
                     <li><a href="LogoutServlet">Logout</a></li>
-                    <li><a href="help.jsp">Help</a></li>
                     <li><a href="reloginservlet">Run Another</a></li>
                 </ul>
             </div>

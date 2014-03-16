@@ -7,7 +7,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>VistA RPC</title>
     </head>
-    <body bgcolor="#980000">
+    <body>
         <div id="container">
             <div id="header">
                 <h1>

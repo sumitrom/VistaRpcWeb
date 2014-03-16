@@ -8,20 +8,25 @@ and open the template in the editor.
     Author     : Sumitro
 */
 
+
+body {
+ background-color:  #DEB887;// #980000;
+}
+
+
 #container
 {
     
     margin: 0 30px;
     background: #87CEFA;
     font-family: Tahoma;
-    margin:auto;
 }
 
 #header
 {
     font-family: Tahoma;
     font-size: 120%;
-    background: #B8B8B8;
+    background:  #5F9EA0;
     padding: 20px;
 }
 
@@ -107,12 +112,13 @@ and open the template in the editor.
 
 #footer
 {
-    background: #ccc;
+    background:  #5F9EA0;
     text-align: center;
     padding: 20px;
     font: Verdana;
     font-size: 75%;
-    height: .7%;
+    font-weight: bold;
+    height: 14px;
 }
 
 #loginbox .myinput {
@@ -127,7 +133,7 @@ and open the template in the editor.
 }
 
 #loginbox .mybutton {
-    background-color:  #E9967A;
+    background-color:  #FE9A2E;
     font-weight: bold;
     font-size:14px;
     width: 220px;

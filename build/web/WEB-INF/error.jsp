@@ -7,7 +7,7 @@
 
         <title>Error Page</title>
     </head>
-    <body bgcolor="#980000">
+    <body>
 
         <br><br>
 

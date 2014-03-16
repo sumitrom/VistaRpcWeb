@@ -32,11 +32,9 @@
         String vistaip = (String) session.getAttribute("vistaip");
         Integer vistaport = (Integer) session.getAttribute("vistaport");
         String conninfo = (String) session.getAttribute("conninfo");
-        System.out.println("Oh lalal Connected: " + cxn.isConnected());
-        System.out.println("Oh Lala "+vistaip + ":" + vistaport);
     %>
 
-    <body bgcolor="#980000">
+    <body>
         <div id="container">
             <div id="header">
                 <h1>

@@ -7,7 +7,11 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>VistA RPC</title>
     </head>
-    <body bgcolor="#980000">
+    <%
+        String uname = (String) session.getAttribute("uname");
+        String conninfo = (String) session.getAttribute("conninfo");
+    %>
+    <body>
         <div id="container">
             <div id="header">
                 <h1>
@@ -43,7 +47,7 @@
             </div>
 
             <div id="footer">
-                Copyright © Sumitro Majumdar, 2014
+                Logged in as: <%= uname.toString() + conninfo%> 
             </div>
         </div>
     </body>

@@ -13,9 +13,13 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Log out - RPC Runner</title>
     </head>
-    <body bgcolor="#980000">
+    <body>
         <div id="container">
-
+            <div id="header">
+                <h1>
+                    VistA RPC Runner 
+                </h1>
+            </div>
         <div id="loginbox" style="text-align: center">
 
             <form class="box login" method="LINK" action="login.jsp">
@@ -26,8 +30,8 @@
         <div id="footer">
             Copyright © Sumitro Majumdar, 2014
         </div>
-        </div>
-    </body>
+    </div>
+</body>
 </html>
 
 
