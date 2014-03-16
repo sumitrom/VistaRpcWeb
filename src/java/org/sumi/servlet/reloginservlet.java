@@ -33,12 +33,14 @@ public class reloginservlet extends HttpServlet {
         HttpSession session = request.getSession();
 
         String vistaip = (String) session.getAttribute("vistaip");
-//        int vistaport = (int) session.getAttribute("vistaport");
-//   //     int vistaport = Integer.parseInt(port);
-        String vport = (String) session.getAttribute("vistaport");
-        int vistaport = Integer.parseInt(port);
         String accesscode = (String) session.getAttribute("accesscode");
         String verifycode = (String) session.getAttribute("verifycode");
+        Integer vistaport = (Integer) session.getAttribute("vistaport");
+        System.out.println("From reloginservlet: " + vistaip + ":"+vistaport + " " + accesscode + " " + verifycode);
+
+ //       int vport = Integer.parseInt(connport);
+
+
 
         try (PrintWriter out = response.getWriter()) {
 
@@ -51,12 +53,12 @@ public class reloginservlet extends HttpServlet {
                 String resp = r.getResponse();
                 String token[] = resp.split("\r\n");
                 String username = token[1];
-                String conninfo = (" * Connected to " + vistaip + " at port " + vport);
+                String conninfo = (" * Connected to " + vistaip + " at port " + vistaport);
 
                 session.setAttribute("cxn", c);
                 session.setAttribute("uname", username);
                 session.setAttribute("vistaip", vistaip);
-                session.setAttribute("vport", vport);
+                session.setAttribute("vistaport", vistaport);
                 session.setAttribute("conninfo", conninfo);
                 session.setAttribute("accesscode", accesscode);
                 session.setAttribute("verifycode", verifycode);

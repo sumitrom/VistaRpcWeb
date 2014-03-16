@@ -30,9 +30,10 @@
         String uname = (String) session.getAttribute("uname");
         RPCClient cxn = (RPCClient) session.getAttribute("cxn");
         String vistaip = (String) session.getAttribute("vistaip");
-        String vport = (String) session.getAttribute("vport");
+        Integer vistaport = (Integer) session.getAttribute("vistaport");
         String conninfo = (String) session.getAttribute("conninfo");
-        System.out.println("Connected: " + cxn.isConnected());
+        System.out.println("Oh lalal Connected: " + cxn.isConnected());
+        System.out.println("Oh Lala "+vistaip + ":" + vistaport);
     %>
 
     <body bgcolor="#980000">

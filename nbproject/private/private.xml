@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group/>
+        <group>
+            <file>file:/C:/Users/Sumitro/Documents/NetBeansProjects/VistaRpcWeb/web/connected.jsp</file>
+            <file>file:/C:/Users/Sumitro/Documents/NetBeansProjects/VistaRpcWeb/web/WEB-INF/error_in_results.jsp</file>
+            <file>file:/C:/Users/Sumitro/Documents/NetBeansProjects/VistaRpcWeb/web/WEB-INF/results.jsp</file>
+            <file>file:/C:/Users/Sumitro/Documents/NetBeansProjects/VistaRpcWeb/src/java/org/sumi/servlet/reloginservlet.java</file>
+            <file>file:/C:/Users/Sumitro/Documents/NetBeansProjects/VistaRpcWeb/src/java/org/sumi/servlet/loginservlet.java</file>
+            <file>file:/C:/Users/Sumitro/Documents/NetBeansProjects/VistaRpcWeb/web/css/basic.css</file>
+        </group>
     </open-files>
 </project-private>

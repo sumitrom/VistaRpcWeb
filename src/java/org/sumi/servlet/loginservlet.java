@@ -33,7 +33,7 @@ public class loginservlet extends HttpServlet {
         String vistaip = request.getParameter("vistaip");
         String port = request.getParameter("vistaport");
         int vistaport = Integer.parseInt(request.getParameter("vistaport"));
-        String vport = request.getParameter("vistaport");
+  //      String vport = request.getParameter("vistaport");
 
         String accesscode = request.getParameter("accesscode");
         String verifycode = request.getParameter("verifycode");
@@ -60,7 +60,7 @@ public class loginservlet extends HttpServlet {
                 String resp = r.getResponse();
                 String token[] = resp.split("\r\n");
                 String username = token[1];
-                String conninfo = (" * Connected to " + vistaip + " at port " + vport);
+                String conninfo = (" * Connected to " + vistaip + " at port " + vistaport);
                 // session.setAttribute(username, out);
                 
                 //Set session attributes
@@ -68,7 +68,7 @@ public class loginservlet extends HttpServlet {
                 session.setAttribute("cxn", c);
                 session.setAttribute("uname", username);
                 session.setAttribute("vistaip", vistaip);
-                session.setAttribute("vport", vport);
+                session.setAttribute("vistaport", vistaport);
                 session.setAttribute("conninfo", conninfo);
                 session.setAttribute("accesscode", accesscode);
                 session.setAttribute("verifycode", verifycode);
