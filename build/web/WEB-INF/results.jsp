@@ -15,12 +15,6 @@
         <title>VistA RPC</title>
     </head>
     <%
-
-        response.setHeader("Cache-Control", "no-cache");
-        response.setHeader("Cache-Control", "no-store");
-        response.setHeader("Pragma", "no-cache");
-        response.setDateHeader("Expires", 0);
-
         String uname = (String) session.getAttribute("uname");
         if (session.getAttribute("uname") == null) {
             response.sendRedirect("login.jsp");
@@ -43,6 +37,7 @@
                     <li><a href="LogoutServlet">Logout</a></li>
                     <li><a href="help.jsp">Help</a></li>
                     <li><a href="connected.jsp">Run Another</a></li>
+                    <li><a href="results_JSON.jsp">JSON</a></li>
                 </ul>
             </div>
             <div id="content" style="overflow:scroll; height:500px;">

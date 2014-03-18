@@ -23,7 +23,7 @@
         String rpctorun = (String) session.getAttribute("rpctorun");
         String parameters = (String) session.getAttribute("parameters");
         String inputstring = (String) session.getAttribute("output");
-        String token[] = inputstring.split("\n");%>
+    %>
 
     <body>
         <div id="container">
@@ -37,7 +37,6 @@
                     <li><a href="LogoutServlet">Logout</a></li>
                     <li><a href="help.jsp">Help</a></li>
                     <li><a href="connected.jsp">Run Another</a></li>
-                    <li><a href="results_JSON.jsp">JSON</a></li>
                 </ul>
             </div>
             <div id="content" style="overflow:scroll; height:500px;">
@@ -52,9 +51,25 @@
                 <p>
 
                     <%
-                        for (int i = 0; i < token.length; i++) {
-                            out.print(token[i] + "<br>");
+                        String lines[] = inputstring.split("\n");
+
+                        String jsonOutput = "";
+                        for (int i = 0; (i < lines.length); i++) {
+                            String[] fields = lines[i].split("\\^");
+                            System.out.println("{");
+                            jsonOutput = jsonOutput + "{";
+
+                            for (int j = 0; j < (fields.length - 1); j++) {
+                                System.out.println("   \"field" + j + "\":" + "\"" + fields[j] + "\",");
+                                jsonOutput = jsonOutput + "\"field" + j + "\":" + "\"" + fields[j] + "\",";
+                            }
+                            System.out.println("   \"field" + (fields.length - 1) + "\":" + "\"" + fields[fields.length - 1] + "\"");
+                            jsonOutput = jsonOutput + "\"field" + (fields.length - 1) + "\":" + "\"" + fields[fields.length - 1] + "\"";
+                            System.out.println("},");
+                            jsonOutput = jsonOutput + "},";
                         }
+                        jsonOutput = jsonOutput.substring(0, jsonOutput.length() - 1);
+                        out.print(jsonOutput);
                     %>
                 </p>
 
